@@ -8,7 +8,7 @@ class TwoSumTest {
 
     //Example 1 in question
     @Test
-    void testWithOddTarget() {
+    void oddTarget() {
         int[] nums = {2, 7, 11, 15};
         int[] solution = {0, 1};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, 9)),
@@ -17,7 +17,7 @@ class TwoSumTest {
 
     //Example 2 in question
     @Test
-    void testWithEvenTargetWithArrayContainsHalfOnce() {
+    void evenTargetWithArrayContainsHalfOnce() {
         int[] nums = {3, 2, 4};
         int[] solution = {1, 2};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, 6)),
@@ -26,7 +26,7 @@ class TwoSumTest {
 
     //Example 3 in question
     @Test
-    void testWithEvenTargetWithArrayContainsHalfTwiceConcurrently() {
+    void evenTargetWithArrayContainsHalfTwiceConcurrently() {
         int[] nums = {3, 3};
         int[] solution = {0, 1};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, 6)),
@@ -34,7 +34,7 @@ class TwoSumTest {
     }
 
     @Test
-    void testWithEvenTargetWithArrayContainsHalfTwiceNonConcurrently() {
+    void evenTargetWithArrayContainsHalfTwiceNonConcurrently() {
         int[] nums = {3, 5, 2, 3, 6};
         int[] solution = {0, 3};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, 6)),
@@ -42,7 +42,7 @@ class TwoSumTest {
     }
 
     @Test
-    void testWithNegativeArray() {
+    void negativeArray() {
         int[] nums = {-2, -7, -11, -15};
         int[] solution = {1, 2};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, -18)),
@@ -50,7 +50,7 @@ class TwoSumTest {
     }
 
     @Test
-    void testWithNegativeAndPositiveArray() {
+    void negativeAndPositiveArray() {
         int[] nums = {-3, 2, 4, -10, 7};
         int[] solution = {1, 3};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, -8)),
@@ -58,7 +58,7 @@ class TwoSumTest {
     }
 
     @Test
-    void testWithZeroTargetAndNegativeAndPositiveArray() {
+    void zeroTargetAndNegativeAndPositiveArray() {
         int[] nums = {-3, 2, -4, 5, -7, -2, 9};
         int[] solution = {1, 5};
         assertAll(() -> assertArrayEquals(solution, TwoSum.twoSumOne(nums, 0)),

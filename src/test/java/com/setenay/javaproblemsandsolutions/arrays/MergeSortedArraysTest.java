@@ -10,7 +10,7 @@ class MergeSortedArraysTest {
     int[] arr2;
 
     @Test
-    void testMergeEmptyArrays() {
+    void mergeEmptyArrays() {
         this.arr1 = new int[]{};
         this.arr2 = new int[]{};
         assertAll(() -> assertArrayEquals(new int[]{}, MergeSortedArrays.mergeSortedArrays(arr1, arr2)),
@@ -18,14 +18,14 @@ class MergeSortedArraysTest {
     }
 
     @Test
-    void testMergeWithEmptyArray() {
+    void mergeWithEmptyArray() {
         this.arr1 = new int[]{1, 2, 5, 7, 9};
         this.arr2 = new int[]{};
         assertArrayEquals(new int[]{1, 2, 5, 7, 9}, MergeSortedArrays.mergeSortedArrays(arr1, arr2));
     }
 
     @Test
-    void testMergeArrays() {
+    void mergeArrays() {
         this.arr1 = new int[]{5, 7, 9, 10, 11, 12};
         this.arr2 = new int[]{1, 2, 3, 4, 6, 8};
         assertArrayEquals(new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12},
@@ -33,7 +33,7 @@ class MergeSortedArraysTest {
     }
 
     @Test
-    void testMergeArraysWithDuplicated() {
+    void mergeArraysWithDuplicated() {
         this.arr1 = new int[]{3, 5, 7, 9, 10, 11, 12};
         this.arr2 = new int[]{1, 2, 3, 4, 6, 6, 6, 6, 8};
         assertArrayEquals(new int[]{1, 2, 3, 3, 4, 5, 6, 6, 6, 6, 7, 8, 9, 10, 11, 12},
